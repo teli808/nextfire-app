@@ -4,7 +4,7 @@ import { UserContext } from '@/lib/context';
 
 import debounce from "lodash.debounce";
 
-export default function Enter(props) {
+export default function Enter() {
     const { user, username } = useContext(UserContext);
     
     //1. user signed out <SignInButton />
