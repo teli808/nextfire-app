@@ -9,13 +9,13 @@ export default function PostContent({ post }) {
             <h1>{post?.title}</h1>
             <span className="text-sm">
                 Written by{' '}
-                <Link href={`/${post.username}/`}>
+                <Link href={`/${post.username}/`} passHref legacyBehavior>
                     <a className="text-info">@{post.username}</a>
                 </Link>(' ')
                 on {createdAt.toISOString()}
             </span>
 
-            <ReactMarkDown>{post?.content}</ReactMarkDown>
+            <ReactMarkdown>{post?.content}</ReactMarkdown>
         </div>
     )
 }
